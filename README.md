@@ -25,7 +25,7 @@ TODO: List your cookbook attributes here.
 e.g.
 ### r::default
 
-attributes for installing from repository
+attributes for installing from repository.
 
 <table>
   <tr>
@@ -47,6 +47,8 @@ attributes for installing from repository
     <td><tt>'https://cran.ism.ac.jp/'</tt></td>
   </tr>
 </table>
+
+attributes for installing from source.
 
 <table>
   <tr>

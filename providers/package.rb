@@ -13,6 +13,12 @@ action :remove do
   end
 end
 
+action :library do
+  execute "library R package" do
+    command r_library(new_resource.package)
+  end
+end
+
 # local methods
 def r_is_installed(package_name)
   "test -e /usr/local/lib/R/site-library/\"#{package_name}\""
@@ -31,4 +37,9 @@ end
 def r_remove(package_name)
   r_command = "remove.packages('#{package_name}')"
   "echo \"#{r_command}\" | R --no-save --no-restore -q"
+end
+
+def r_library(package_name)
+  r_command = "library('#{package_name}')"
+  "R -e \"#{r_command}\" --no-save --no-restore -q"
 end

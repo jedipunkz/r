@@ -1,26 +1,22 @@
-# r Cookbook
+# R Cookbook
 
-TODO: Enter the cookbook description here.
-
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+This chef cookbook make you controll packaging of R.
+R is a free software environment for statistical computing and graphics.
 
 ## Requirements
 
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
+none.
 
-e.g.
 ### Platforms
 
-- SandwichOS
+I tested this cookbook on these platforms.
+
+- Ubuntu 14.04
+- Ubuntu 16.04
 
 ### Chef
 
-- Chef 12.0 or later
-
-### Cookbooks
-
-- `toaster` - r needs toaster to brown your bagel.
+- Chef 11.0 or later
 
 ## Attributes
 
@@ -37,18 +33,16 @@ e.g.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['r']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
+    <td><tt>['r']['repos']</tt></td>
+    <td>String</td>
+    <td>Repository URL of R packages</td>
+    <td><tt>'https://cran.ism.ac.jp/'</tt></td>
   </tr>
 </table>
 
 ## Usage
 
 ### r::default
-
-TODO: Write usage instructions for each cookbook.
 
 e.g.
 Just include `r` in your node's `run_list`:
@@ -64,8 +58,6 @@ Just include `r` in your node's `run_list`:
 
 ## Contributing
 
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
-
 e.g.
 1. Fork the repository on Github
 2. Create a named feature branch (like `add_component_x`)
@@ -76,5 +68,6 @@ e.g.
 
 ## License and Authors
 
-Authors: TODO: List authors
+Authors: Tomokazu HIRAI
+License: MIT License
 

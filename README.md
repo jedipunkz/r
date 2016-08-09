@@ -25,6 +25,8 @@ TODO: List your cookbook attributes here.
 e.g.
 ### r::default
 
+attributes for installing from repository
+
 <table>
   <tr>
     <th>Key</th>
@@ -33,10 +35,37 @@ e.g.
     <th>Default</th>
   </tr>
   <tr>
+    <td><tt>['r']['package']</tt></td>
+    <td>String</td>
+    <td>Package name</td>
+    <td><tt>None</tt></td>
+  </tr>
+  <tr>
     <td><tt>['r']['repos']</tt></td>
     <td>String</td>
     <td>Repository URL of R packages</td>
     <td><tt>'https://cran.ism.ac.jp/'</tt></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>Key</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Default</th>
+  </tr>
+  <tr>
+    <td><tt>['r']['package']</tt></td>
+    <td>String</td>
+    <td>Package name</td>
+    <td><tt>None</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['r']['url']</tt></td>
+    <td>String</td>
+    <td>URL of R package source</td>
+    <td><tt>None</tt></td>
   </tr>
 </table>
 

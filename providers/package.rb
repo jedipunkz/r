@@ -9,7 +9,7 @@ end
 action :remove do
   execute "remove R package" do
     command r_remove(new_resource.package)
-		not_if r_is_removed(new_resource.package)
+    not_if r_is_removed(new_resource.package)
   end
 end
 

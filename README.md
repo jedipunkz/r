@@ -73,16 +73,26 @@ attributes for installing from repository
 
 ### r::default
 
-e.g.
-Just include `r` in your node's `run_list`:
+Just include `r` in your cookbook:
 
-```json
-{
-  "name":"my_node",
-  "run_list": [
-    "recipe[r]"
-  ]
-}
+```ruby
+include_recipe "r"
+
+r_package 'install rJava package from repo' do
+  package 'rJava'
+  action :install
+end
+
+r_source 'install Rhipe package from source' do
+  package 'Rhipe'
+  url 'http://ml.stat.purdue.edu/rhipebin/Rhipe_0.75.2_cdh5.tar.gz'
+  action :install
+end
+
+r_package 'remove rJava package' do
+  package 'rJava'
+  action :remove
+end
 ```
 
 ## Contributing
